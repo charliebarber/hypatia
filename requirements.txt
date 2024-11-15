@@ -1,0 +1,33 @@
+astropy==6.1.6
+astropy-iers-data==0.2024.11.11.0.32.38
+Cartopy==0.24.1
+certifi==2024.8.30
+contourpy==1.3.1
+cycler==0.12.1
+ephem==4.1.6
+exputil @ git+https://github.com/snkas/exputilpy.git@014750099016c725346d5a164e738c93c8a42224
+fonttools==4.54.1
+geographiclib==2.0
+geopy==2.4.1
+kiwisolver==1.4.7
+matplotlib==3.9.2
+networkload @ git+https://github.com/snkas/networkload.git@3531c28466a8461cdd0cc1708426389305cd48f8
+networkx==3.4.2
+numpy==2.1.3
+packaging==24.2
+pandas==2.2.3
+patsy==1.0.1
+pillow==11.0.0
+pyerfa==2.0.1.5
+pyparsing==3.2.0
+pyproj==3.7.0
+pyshp==2.3.1
+python-dateutil==2.9.0.post0
+pytz==2024.2
+PyYAML==6.0.2
+scipy==1.14.1
+sgp4==2.23
+shapely==2.0.6
+six==1.16.0
+statsmodels==0.14.4
+tzdata==2024.2

@@ -1,6 +1,6 @@
 # Hypatia
 
-Hypatia is a low earth orbit (LEO) satellite network simulation framework. It pre-calculates network state over time, enables packet-level simulations using ns-3 and provides visualizations to aid understanding.
+Hypatia is a low earth orbit (LEO) satellite network simulation framework. It pre-calculates network state over time, enables packet-level simulations using ns-3 and provides visualizations to aid understanding. This repository details my extensions to get the framework working with up-to-date tooling and the adaptions made to suit my Master's final year project.
 
 <a href="#"><img alt="Kuiper side-view" src="https://raw.githubusercontent.com/leosatsim/leosatsim.github.io/master/images/Kuiper_side_view.png" width="20%" /></a>
 <a href="#"><img alt="Telesat top-view" src="https://raw.githubusercontent.com/leosatsim/leosatsim.github.io/master/images/Telesat_top_view.png" width="20%" /></a>
@@ -58,27 +58,61 @@ BibTeX citation:
 
 ## Getting started
 
-1. System setup:
-   - Python version 3.7+
-   - Recent Linux operating system (e.g., Ubuntu 18+)
+1. System requirements:
+    - Python version 3.10
+    - C++17 compiler (gcc)
+    - Recent Linux operating system (e.g., Ubuntu 18+)
+      - My personal setup was on Fedora Workstation 40. I have not tested the below instructions on other distributions.
+    - A pretty powerful computer.
+      - The simulations are demanding.
 
-2. Install dependencies:
-   ```
-   bash hypatia_install_dependencies.sh
-   ```
+3. Create Python virtual environment:
+
+    Create and activate a virtual environment:
+    ```
+    python3.10 -m venv venv
+    source venv/bin/activate
+    ```
+    Install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+
+
+2. Install system dependencies:
+
+    For Fedora-based distros:
+    ```
+    sudo dnf update
+    sudo dnf install proj-devel proj-data geos-devel openmpi openmpi-devel lcov gnuplot 
+    ```
+
+    For Ubuntu/Debian-based distros:
+    ```
+    sudo apt-get update && sudo apt-get install -y libproj-dev proj-data proj-bin libgeos-dev openmpi-bin openmpi-common openmpi-doc libopenmpi-dev lcov gnuplot
+    ```
    
 3. Build all four modules (as far as possible):
-   ```
-   bash hypatia_build.sh
-   ```
+    
+    Make sure your shell is using C++17 and able to find the MPI installation. This assumes you are using bash as a shell.
+    ```
+    export CXXFLAGS="-std=c++17"
+    export PATH=/usr/lib64/openmpi/bin:$PATH
+    source ~/.bashrc
+    ```
+
+    Now try to build Hypatia.
+    ```
+    bash hypatia_build.sh
+    ```
    
 4. Run tests:
-   ```
-   bash hypatia_run_tests.sh
-   ```
+    ```
+    bash hypatia_run_tests.sh
+    ```
 
 5. The reproduction of the paper is essentially the tutorial for Hypatia.
-   Please navigate to `paper/README.md`.
+   Please navigate to `paper/README.md` and follow the steps described. 
 
 ### Visualizations
 Most of the visualizations in the paper are available [here](https://leosatsim.github.io/).
