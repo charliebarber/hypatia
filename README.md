@@ -1,6 +1,8 @@
 # Hypatia
 
-Hypatia is a low earth orbit (LEO) satellite network simulation framework. It pre-calculates network state over time, enables packet-level simulations using ns-3 and provides visualizations to aid understanding. This repository details my extensions to get the framework working with up-to-date tooling and the adaptions made to suit my Master's final year project.
+Hypatia is a low earth orbit (LEO) satellite network simulation framework. It pre-calculates network state over time, enables packet-level simulations using ns-3 and provides visualizations to aid understanding. This repository details my extensions to get the framework working with up-to-date tooling and the adaptions made to suit my Master's final year project. 
+
+Plots can be found on <a href="https://www.charlieb.dev/hypatia-web/index.html">my personal site</a>.
 
 <a href="#"><img alt="Kuiper side-view" src="https://raw.githubusercontent.com/leosatsim/leosatsim.github.io/master/images/Kuiper_side_view.png" width="20%" /></a>
 <a href="#"><img alt="Telesat top-view" src="https://raw.githubusercontent.com/leosatsim/leosatsim.github.io/master/images/Telesat_top_view.png" width="20%" /></a>
